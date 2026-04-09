@@ -362,7 +362,7 @@ Or in plain text:
 >Haque, M. A., Deb, C. K., Gole, P., Karmakar, S., Dheeraj, A., Shah, M. U. D., ... 
 > & Marwaha, S. (2025). An enhanced vision transformer network for 
 > efficient and accurate crop disease detection. 
-> *Expert Systems with Applications*, 283, 127743.
+> *Expert Systems with Applications*, 283, 127743.https://doi.org/10.1016/j.eswa.2025.127743
 ---
 
 ## License
