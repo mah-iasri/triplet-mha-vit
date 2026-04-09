@@ -330,11 +330,11 @@ results/exp0/
 | `key_dim` | 64             | Qeury, Key & Value dimensions per head    |
 | `dense_units` | [256, 64]      | MLP hidden units (4×`key_dim`, 1×`key_dim`)           |
 | `dropout` | 0.3            | Dropout rate in MHA + MLP                 |
-| `transformer_blocks` | 7              | Total Triplet-MHA encoder blocks          |
+| `transformer_blocks` | 5              | Total Triplet-MHA encoder blocks          |
 | `batch_size` | 128            | Training batch size                       |
 | `epochs` | 100            | Maximum training epochs                   |
 | `optimizer` | Adam           | Adaptive learning rate optimiser          |
-| `learning_rate` | 0.001          | Initial Adam learning rate                |
+| `learning_rate` | 0.0001          | Initial Adam learning rate                |
 | `weight_decay` | 0.0001         | L2 regularisation (positional embeddings) |
 | `loss` | Categorical CE | Multi-class cross-entropy loss            |
 | `n_classes` | 21             | Apple + Rice disease categories           |
