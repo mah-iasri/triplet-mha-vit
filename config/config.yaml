@@ -1,0 +1,53 @@
+# =============================================================================
+# configs/config.yaml
+# Triplet-MHA ViT — Master Configuration File
+#
+# All training hyperparameters, dataset paths, and callback settings are
+# controlled from this single file. Update `paths.dataset_root` before
+# running scripts/train.py.
+# =============================================================================
+
+# ── Dataset Paths ─────────────────────────────────────────────────────────
+paths:
+  dataset_root: "/raid/ashraf/New_modelling_work/dataset/new_paper_data/apple_rice/224_split_new"
+  train_dir:    "train"
+  val_dir:      "val"
+  test_dir:     "test"
+  results_dir:  "results"
+
+# ── Data Settings ─────────────────────────────────────────────────────────
+data:
+  img_size:      224          # Input image size (H = W = 224)
+  n_classes:     21           # Will be auto-detected from dataset; override if needed
+  channel_first: false        # Set true for (N, C, H, W) format
+
+# ── Model Architecture ────────────────────────────────────────────────────
+model:
+  patch_size:              [12, 12]   # (patch_h, patch_w) — square patches
+  embed_dim:               64         # Embedding dimension (dims in original code)
+  num_heads:               8          # Number of MHA heads
+  # MLP hidden units = [embed_dim * 4, embed_dim * 1] = [256, 64]
+  dense_units_multipliers: [4, 1]
+  mlp_head_units:          [128]      # Classification head MLP (unused in current arch)
+  dropout:                 0.3        # Global dropout rate
+
+# ── Training Hyperparameters ──────────────────────────────────────────────
+training:
+  batch_size:    128
+  epochs:        100
+  optimizer:     "adam"
+  learning_rate: 0.001        # Adam lr
+  weight_decay:  0.0001       # For reference; use AdamW if weight decay needed
+  loss:          "categorical_crossentropy"
+  metrics:
+    - "accuracy"
+    - "Precision"
+    - "Recall"
+
+# ── Callbacks ─────────────────────────────────────────────────────────────
+callbacks:
+  monitor:       "val_accuracy"
+  mode:          "max"
+  save_best_only: true
+  verbose:       1
+  tensorboard:   true          # Set false to disable TensorBoard logging
