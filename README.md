@@ -361,7 +361,7 @@ If you use this work in your research, please cite:
 Or in plain text:
 >Haque, M. A., Deb, C. K., Gole, P., Karmakar, S., Dheeraj, A., Shah, M. U. D., ... 
 > & Marwaha, S. (2026). Triplet-MHA Vision Transformer for Plant Disease Detection.
->Github: https://github.com/mah-iasri/triplet-mha-vit />
+>Github: https://github.com/mah-iasri/triplet-mha-vit
 
 ---
 
