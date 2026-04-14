@@ -1,6 +1,6 @@
 <div align="center">
 
-# Triplet-MHA ViT for Plant Disease Detection
+# Triplet-MHA Vision Transformer for Plant Disease Detection
 
 **A novel Vision Transformer framework replacing standard Multi-Head Attention (MHA) with 
 Triplet Multi-Head Attention (t-MHA) in each encoder block for fine-grained plant disease 
@@ -360,9 +360,9 @@ If you use this work in your research, please cite:
 
 Or in plain text:
 >Haque, M. A., Deb, C. K., Gole, P., Karmakar, S., Dheeraj, A., Shah, M. U. D., ... 
-> & Marwaha, S. (2025). An enhanced vision transformer network for 
-> efficient and accurate crop disease detection. 
-> *Expert Systems with Applications*, 283, 127743.https://doi.org/10.1016/j.eswa.2025.127743
+> & Marwaha, S. (2026). Triplet-MHA Vision Transformer for Plant Disease Detection.
+>Github: https://github.com/mah-iasri/triplet-mha-vit />
+
 ---
 
 ## License
